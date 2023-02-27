@@ -35,14 +35,12 @@ def index(request):
 
     elif 'all' in request.POST:
         image = Images.objects.all()
-    elif 'trees' in request.POST:
-        image = Images.objects.filter(category_id__name='trees')
-    elif 'birds' in request.POST:
-        image = Images.objects.filter(category_id__name='birds')
-    elif 'fish' in request.POST:
-        image = Images.objects.filter(category_id__name='fish')
-    elif 'animals' in request.POST:
-        image = Images.objects.filter(category_id__name = 'animals')
+    elif 'Frontend' in request.POST:
+        image = Images.objects.filter(category_id__name='Frontend')
+    elif 'Backend' in request.POST:
+        image = Images.objects.filter(category_id__name='Backend')
+    elif 'Documentation' in request.POST:
+        image = Images.objects.filter(category_id__name='Documentation')
 
     elif 'Frontend' in request.POST:
         skill = Skills.objects.filter(development_id__name='Frontend')
